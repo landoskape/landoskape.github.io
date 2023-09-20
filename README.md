@@ -1,3 +1,4 @@
-# Your blog
+# The landoskape blog
 
-This is the repository for your blog! Click *_config.yml* above to get started and fill in the details. Then click *index.md* and edit it to start creating your home page.
+Check out the blog site supported by GitHub Pages [here](https://landoskape.github.io/). This blog site is facilitated by an extremely useful [template](https://github.com/fastai/fast_template) written by fastai, thank you to them. 
+
