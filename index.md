@@ -1,7 +1,1 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
-
-![Image of fast.ai logo](images/logo.png)
-
-## This is a title
-
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+Welcome to my blog. It's a work in progress, as it will always be, but if you find it sometime around Fall 2023, it's probably hardly even a blog yet. Yet. So, welcome, and if you are interested in talking to me about mine or your ideas, please contact me! It's why I'm a scientist.
