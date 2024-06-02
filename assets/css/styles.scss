@@ -1,0 +1,188 @@
+---
+---
+@import "main";
+
+:root {
+    --color-flash: #f6feff;
+    --color-base: white;
+}
+
+body {
+    top: 0;
+    height: 10px;
+    background-color: #eaffff;
+    font-family: sans-serif;
+    margin: 40px auto 0px auto;
+    padding: 10px auto 10px auto;
+    justify-content: center;
+    display: flex;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+main {
+    padding-bottom: 100px;
+}
+
+header {
+    background-color: #324d4d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    box-shadow: 0 0 25px 0 black;
+    transition: top 0.6s; 
+}
+
+header.hidden {
+    top: -55px;
+}
+
+.centered-content {
+    top: 0;
+    margin: 20px auto 50px auto;
+    // padding: 0px; 
+    padding-bottom: 1000px;
+    max-width: 800px;
+}
+
+.navbar {
+    display: flex;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left, .navbar-right {
+    flex: 1;
+}
+
+.navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+
+.navbar-center {
+    display: flex;
+    flex: 2;
+    justify-content: center; /* Center the navigation links */
+    max-width: 800px;
+}
+  
+.navbar-center a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #eaffff;
+    display: block;
+    padding: 5px 5px;
+    max-width: 200px;
+    font-size: large;
+    font-weight: 900;
+}
+
+.navbar-center a:hover {
+    background-color: #436767;
+    box-shadow: 0 0 2px 2px #56bcbc;
+    border-radius: 12px;
+}
+
+.navbar-name {
+    color: var(--color-flash);
+    padding: 5px 5px; 
+    font-size: large;
+    font-weight: 900;
+}
+
+.navbar-contact {
+    color: var(--color-flash);
+    padding: 5px 5px; 
+    font-size: large;
+    font-weight: 900;
+}
+
+
+
+.pattern-1 {
+    background:
+        linear-gradient(135deg, var(--color-flash) 21px, var(--color-base) 22px, var(--color-base) 24px, transparent 24px, transparent 67px, var(--color-base) 67px, var(--color-base) 69px, transparent 69px),
+        linear-gradient(225deg, var(--color-flash) 21px, var(--color-base) 22px, var(--color-base) 24px, transparent 24px, transparent 67px, var(--color-base) 67px, var(--color-base) 69px, transparent 69px)0 64px;
+    background-color:var(--color-flash);
+    background-size: 64px 128px;
+}
+
+.pattern-2 {
+    background-color:var(--color-flash);
+    background-image:
+        radial-gradient(circle at 100% 150%, var(--color-flash) 24%, white 24%, white 28%, var(--color-flash) 28%, var(--color-flash) 36%, white 36%, white 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0    150%, var(--color-flash) 24%, white 24%, white 28%, var(--color-flash) 28%, var(--color-flash) 36%, white 36%, white 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50%  100%, white 10%, var(--color-flash) 10%, var(--color-flash) 23%, white 23%, white 30%, var(--color-flash) 30%, var(--color-flash) 43%, white 43%, white 50%, var(--color-flash) 50%, var(--color-flash) 63%, white 63%, white 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, white 5%, var(--color-flash) 5%, var(--color-flash) 15%, white 15%, white 20%, var(--color-flash) 20%, var(--color-flash) 29%, white 29%, white 34%, var(--color-flash) 34%, var(--color-flash) 44%, white 44%, white 49%, transparent 49%, transparent),
+        radial-gradient(circle at 0    50%, white 5%, var(--color-flash) 5%, var(--color-flash) 15%, white 15%, white 20%, var(--color-flash) 20%, var(--color-flash) 29%, white 29%, white 34%, var(--color-flash) 34%, var(--color-flash) 44%, white 44%, white 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+}
+
+.pattern-3 {
+    background:
+        linear-gradient(135deg, var(--color-base) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, var(--color-base) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, var(--color-base) 25%, transparent 25%), 
+        linear-gradient(45deg, var(--color-base) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--color-flash);
+}
+
+.pattern-4 {
+    background:
+        radial-gradient(circle at 100% 50%, transparent 20%, var(--color-flash) 21%,
+            var(--color-flash) 34%, transparent 35%, transparent),
+        radial-gradient(circle at 0% 50%, transparent 20%, var(--color-flash) 21%, var(--color-flash) 34%, transparent 35%, transparent) 0 -20px;
+    background-color: var(--color-base);
+    background-size: 30px 40px;
+}
+
+.pattern-5 {
+    background:
+        radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%,
+        rgb(255, 255, 255) 80%, transparent 80%, transparent),
+        radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%,
+        rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
+        linear-gradient(var(--color-flash) 8px, transparent 8px) 0 -4px,
+        linear-gradient(90deg, var(--color-flash) 8px, transparent 8px) -4px 0;
+    background-color: rgb(255, 255, 255);
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+.pattern-6 {
+    background:
+        radial-gradient(circle, var(--color-flash) 30%, transparent 30%),
+        radial-gradient(circle, var(--color-flash) 30%, transparent 30%) 50px 50px;
+    background-color: var(--color-base);
+    background-size: 100px 100px;
+}
+
+.pattern-7 {
+    background-color: var(--color-flash);
+    background-image:
+        linear-gradient(45deg, var(--color-flash) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--color-flash) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--color-flash) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--color-flash) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+  

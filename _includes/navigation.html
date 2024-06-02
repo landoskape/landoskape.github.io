@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <span class="navbar-name">Andrew Landau's Blog</span>
+  </div>
+  <div class="navbar-center">
+    {% for item in site.data.navigation %}
+      <a href="{{ item.link }}">{{ item.name }}</a>
+    {% endfor %}
+  </div>
+  <div class="navbar-right">
+    <a href="mailto:andrewtylerlandau@gmail.com" class="navbar-contact">
+      Contact
+    </a>
+  </div>
+</nav>

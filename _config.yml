@@ -24,6 +24,8 @@ google_analytics:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
@@ -41,3 +43,7 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed

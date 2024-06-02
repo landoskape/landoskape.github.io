@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body>
+    <header>
+      {% include navigation.html %}
+    </header>
+    <main class="centered-content">
+      {{ content }}
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var header = document.querySelector("header");
+        var lastScrollY = window.scrollY;
+        
+        window.addEventListener("scroll", function() {
+          if (window.scrollY > lastScrollY) {
+            header.classList.add("hidden");
+          } else {
+            header.classList.remove("hidden");
+          }
+          lastScrollY = window.scrollY;
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // List of background pattern classes
+          var patterns = ["pattern-1", "pattern-2", "pattern-3", "pattern-4", "pattern-5", "pattern-6", "pattern-7"]; 
+
+          // Function to apply a random pattern class to the body
+          function changeBackground() {
+              var previousIndex = patterns.indexOf(document.body.className);
+              var randomIndex;
+              do {
+                randomIndex = Math.floor(Math.random() * patterns.length);
+              } while (randomIndex === previousIndex);  
+
+              var randomPattern = patterns[randomIndex];
+              document.body.className = randomPattern;
+          }
+
+          // Change background initially
+          changeBackground();
+      });
+  </script>
+  </body>
+</html>
