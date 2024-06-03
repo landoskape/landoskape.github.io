@@ -4,7 +4,7 @@ date: 2024-06-03
 tags:
   - building
   - plants
-author: Andrew
+author: Andrew Landau
 subheader: Thoughts on building my first static website
 ---
 
@@ -22,3 +22,21 @@ There's really nothing that beats learning from a manual or a basic tutorial.
 </div>
 
 You know, it sometimes feels like hacking is faster. "Hmm, I just want to make the nav bar a bit prettier, let me ask ChatGPT", but unless hacks are built off of a basis of knowledge, I think they just slow me down. I've got an engineering kind of mind, so can't help but tinkering and optimizing, and you can't do that unless you _understand what you're doing._ 
+
+### To not to depend first, and then...
+The funny thing is, after using the basic tutorial and looking up a few more how-tos online, then the chatbots became super useful. I think the reason is because once I had a little nugget of knowledge, then I could understand what the chatbots were showing mean and then learn the structure from that. 
+
+I guess it's a bit like bootstrapping-- you can't start a computer with the most complex program, you have to initialize it with something simpler first then work from there. Since I've never worked with HTML or CSS before, getting thrown a bunch of code from a chatbot was overwhelming and had too much information for me to digest. But after 30 minutes of careful, dedicated learning, they sped up my work loads. 
+
+Speaking of computers, back before we had electronic computers, we had people who were responsible for solving tedious calculations and they were called... "computers"... (Side note: I learned about this because [NASA](https://www.nasa.gov/image-article/computer-conducts-data-analysis/) hired many women 'computers' and this was featured in the excellent movie [Hidden Figures](https://en.wikipedia.org/wiki/Hidden_Figures)). In this sense, I think a chatbot does exactly what the original intention for the concept of a computer is expected to. Chatbots speed up tedious calculations that we know how to do but would rather not so we can focus on higher level problems. And there's the key: 
+
+<div class="text-highlight">
+Chatbots value is maximized when we use them for things we already know how to do.
+</div>
+
+Case in point: I am a skilled python programmer and use chatbots somewhat often, but I almost always didn't need them, I just wanted to go faster. 
+
+### The practicals
+Okay, that's my random, probably completely unoriginal rant about how chatbots aren't useful until you know how to do what you're asking them to do. But what about the actual site design? 
+
+... more coming soon ...
