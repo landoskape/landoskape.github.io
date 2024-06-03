@@ -1,6 +1,9 @@
 ---
 layout: post
-author: Andrew
+date: 2024-06-01
+tags: ["thoughts", "nothing yet", "hello world"]
+author: Andrew Landau
+subheader: blogging is fun!!!
 ---
 
 # I'm Building!
