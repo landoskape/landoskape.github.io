@@ -8,7 +8,7 @@
     {% feed_meta %}
     {% seo %}
   </head>
-  <body>
+  <body class="pattern-1">
     <header>
       {% include navigation.html %}
     </header>
@@ -32,24 +32,14 @@
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-          // List of background pattern classes
-          var patterns = ["pattern-1", "pattern-2", "pattern-3", "pattern-4", "pattern-5", "pattern-6", "pattern-7"]; 
-
-          // Function to apply a random pattern class to the body
-          function changeBackground() {
-              var previousIndex = patterns.indexOf(document.body.className);
-              var randomIndex;
-              do {
-                randomIndex = Math.floor(Math.random() * patterns.length);
-              } while (randomIndex === previousIndex);  
-
-              var randomPattern = patterns[randomIndex];
-              document.body.className = randomPattern;
-          }
-
-          // Change background initially
-          changeBackground();
+        const postBoxes = document.querySelectorAll('.post-box');
+      
+        postBoxes.forEach(box => {
+          box.addEventListener('click', function() {
+            window.location.href = this.getAttribute('data-url');
+          });
+        });
       });
-  </script>
+    </script>
   </body>
 </html>
