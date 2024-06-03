@@ -1,17 +1,18 @@
 ---
 ---
-@import "main";
 
 :root {
-    --color-flash: #f6feff;
+    --color-dark: #025050; //#324d4d
+    --color-darkish: #476e6e;
+    --color-darkflash: #6cacac;
+    --color-flashier: #d5fbff;
+    --color-flash: #eafdff;
     --color-base: white;
 }
 
 body {
     top: 0;
-    height: 10px;
-    background-color: #eaffff;
-    font-family: sans-serif;
+    font-family: georgia;
     margin: 40px auto 0px auto;
     padding: 10px auto 10px auto;
     justify-content: center;
@@ -25,7 +26,7 @@ main {
 }
 
 header {
-    background-color: #324d4d;
+    background-color: var(--color-dark);
     position: fixed;
     top: 0;
     left: 0;
@@ -44,11 +45,110 @@ header.hidden {
 }
 
 .centered-content {
-    top: 0;
-    margin: 20px auto 50px auto;
-    // padding: 0px; 
-    padding-bottom: 1000px;
+    background-color: var(--color-base);
+    padding: 20px 40px 20px; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
     max-width: 800px;
+    width: 100%;
+    transition: background-color 0.6s;
+}
+
+.centered-content.focus {
+    background-color: var(--color-dark);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+
+.centered-content a:link {
+    color: var(--color-dark);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+  
+.centered-content a:hover {
+    color: var(--color-darkflash);
+}
+
+.centered-content a:visited {
+    color: var(--color-dark);
+}
+
+.centered-content a:visited:hover {
+    color: var(--color-darkflash); 
+}
+
+.text-highlight {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-flash);
+    border-radius: 15px;
+    font-style: italic;
+}
+
+.posts-list {
+    margin: 0;
+    padding: 10px 0px;
+    list-style: none;
+}
+
+.post-box {
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+
+.post-box:hover {
+    background-color: var(--color-flashier);    
+}
+
+.post-header, .post-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title a:hover {
+    color: inherit;
+}
+
+
+.post-date {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+}
+
+.post-subheader {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.tag {
+    margin: 1px;
+    padding: 0px 2px;
+    font-size: 1rem;
+    color: gray;
+    background-color: var(--color-flash);
+    border-radius: 5px;
+}
+
+.post-divider {
+    margin: 20px 0;
 }
 
 .navbar {
@@ -58,6 +158,7 @@ header.hidden {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Georgia';
 }
 
 .navbar-left, .navbar-right {
@@ -93,12 +194,14 @@ header.hidden {
     max-width: 200px;
     font-size: large;
     font-weight: 900;
+    border-radius: 12px;
+    transition: background-color 0.4s ease;
+    transition: box-shadow 0.4s ease;
 }
 
 .navbar-center a:hover {
     background-color: #436767;
     box-shadow: 0 0 2px 2px #56bcbc;
-    border-radius: 12px;
 }
 
 .navbar-name {
@@ -108,25 +211,34 @@ header.hidden {
     font-weight: 900;
 }
 
+.navbar-item {
+    margin: 0px 10px 0px 10px; /* Adjust the value as needed */
+}
+
 .navbar-contact {
     color: var(--color-flash);
+    text-decoration: none;
     padding: 5px 5px; 
     font-size: large;
     font-weight: 900;
+    transition: color 0.4s ease;
 }
 
-
+.navbar-contact:hover {
+    color: var(--color-darkflash);   
+    text-decoration: underline;
+}
 
 .pattern-1 {
     background:
-        linear-gradient(135deg, var(--color-flash) 21px, var(--color-base) 22px, var(--color-base) 24px, transparent 24px, transparent 67px, var(--color-base) 67px, var(--color-base) 69px, transparent 69px),
-        linear-gradient(225deg, var(--color-flash) 21px, var(--color-base) 22px, var(--color-base) 24px, transparent 24px, transparent 67px, var(--color-base) 67px, var(--color-base) 69px, transparent 69px)0 64px;
-    background-color:var(--color-flash);
+        linear-gradient(135deg, var(--color-base) 21px, var(--color-flash) 22px, var(--color-flash) 24px, transparent 24px, transparent 67px, var(--color-flash) 67px, var(--color-flash) 69px, transparent 69px),
+        linear-gradient(225deg, var(--color-base) 21px, var(--color-flash) 22px, var(--color-flash) 24px, transparent 24px, transparent 67px, var(--color-flash) 67px, var(--color-flash) 69px, transparent 69px)0 64px;
+    background-color:var(--color-base);
     background-size: 64px 128px;
 }
 
 .pattern-2 {
-    background-color:var(--color-flash);
+    background-color: var(--color-flash);
     background-image:
         radial-gradient(circle at 100% 150%, var(--color-flash) 24%, white 24%, white 28%, var(--color-flash) 28%, var(--color-flash) 36%, white 36%, white 40%, transparent 40%, transparent),
         radial-gradient(circle at 0    150%, var(--color-flash) 24%, white 24%, white 28%, var(--color-flash) 28%, var(--color-flash) 36%, white 36%, white 40%, transparent 40%, transparent),
@@ -135,54 +247,3 @@ header.hidden {
         radial-gradient(circle at 0    50%, white 5%, var(--color-flash) 5%, var(--color-flash) 15%, white 15%, white 20%, var(--color-flash) 20%, var(--color-flash) 29%, white 29%, white 34%, var(--color-flash) 34%, var(--color-flash) 44%, white 44%, white 49%, transparent 49%, transparent);
     background-size: 100px 50px;
 }
-
-.pattern-3 {
-    background:
-        linear-gradient(135deg, var(--color-base) 25%, transparent 25%) -50px 0,
-        linear-gradient(225deg, var(--color-base) 25%, transparent 25%) -50px 0,
-        linear-gradient(315deg, var(--color-base) 25%, transparent 25%), 
-        linear-gradient(45deg, var(--color-base) 25%, transparent 25%);
-    background-size: 100px 100px;
-    background-color: var(--color-flash);
-}
-
-.pattern-4 {
-    background:
-        radial-gradient(circle at 100% 50%, transparent 20%, var(--color-flash) 21%,
-            var(--color-flash) 34%, transparent 35%, transparent),
-        radial-gradient(circle at 0% 50%, transparent 20%, var(--color-flash) 21%, var(--color-flash) 34%, transparent 35%, transparent) 0 -20px;
-    background-color: var(--color-base);
-    background-size: 30px 40px;
-}
-
-.pattern-5 {
-    background:
-        radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%,
-        rgb(255, 255, 255) 80%, transparent 80%, transparent),
-        radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%,
-        rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
-        linear-gradient(var(--color-flash) 8px, transparent 8px) 0 -4px,
-        linear-gradient(90deg, var(--color-flash) 8px, transparent 8px) -4px 0;
-    background-color: rgb(255, 255, 255);
-    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
-}
-
-.pattern-6 {
-    background:
-        radial-gradient(circle, var(--color-flash) 30%, transparent 30%),
-        radial-gradient(circle, var(--color-flash) 30%, transparent 30%) 50px 50px;
-    background-color: var(--color-base);
-    background-size: 100px 100px;
-}
-
-.pattern-7 {
-    background-color: var(--color-flash);
-    background-image:
-        linear-gradient(45deg, var(--color-flash) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--color-flash) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, var(--color-flash) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--color-flash) 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-}
-  
