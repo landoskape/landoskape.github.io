@@ -31,7 +31,7 @@ I guess it's a bit like bootstrapping-- you can't start a computer with the most
 Speaking of computers, back before we had electronic computers, we had people who were responsible for solving tedious calculations and they were called... "computers"... (Side note: I learned about this because [NASA](https://www.nasa.gov/image-article/computer-conducts-data-analysis/) hired many women 'computers' and this was featured in the excellent movie [Hidden Figures](https://en.wikipedia.org/wiki/Hidden_Figures)). In this sense, I think a chatbot does exactly what the original intention for the concept of a computer is expected to. Chatbots speed up tedious calculations that we know how to do but would rather not so we can focus on higher level problems. And there's the key: 
 
 <div class="text-highlight">
-The value of a chatbot is maximized when we use them for things we already know how to do.
+The value of chatbots is maximized when we use them for things we already know how to do.
 </div>
 
 Case in point: I am a skilled python programmer and use chatbots somewhat often, but I almost always didn't need them, I just wanted to go faster. 
