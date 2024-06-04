@@ -20,7 +20,6 @@ permalink: /tags/
 
 {% for tag in sorted_tags %}
   {% assign tag_name = tag | strip %}
-  <!-- might need to make this tag_name | slugify somewhere to link from clicking on the tags -->
   <h3 id="{{ tag_name | slugize }}">{{ tags_data[tag_name].name }}</h3>
   <p>{{ tags_data[tag_name].description }}</p>
   <ul>
@@ -32,3 +31,7 @@ permalink: /tags/
     {% endfor %}
   </ul>
 {% endfor %}
+
+
+<!-- might need to make this tag_name | slugify somewhere to link from clicking on the tags -->
+  
