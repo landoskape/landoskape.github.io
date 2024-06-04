@@ -188,7 +188,7 @@ header.hidden {
     flex: 1;
     text-align: center;
     text-decoration: none;
-    color: #eaffff;
+    color: white;
     display: block;
     padding: 5px 5px;
     max-width: 200px;
@@ -196,7 +196,7 @@ header.hidden {
     font-weight: 900;
     border-radius: 12px;
     transition: background-color 0.4s ease;
-    transition: box-shadow 0.4s ease;
+    transition: box-shadow 0.2s ease;
 }
 
 .navbar-center a:hover {
@@ -205,7 +205,7 @@ header.hidden {
 }
 
 .navbar-name {
-    color: var(--color-flash);
+    color: white;
     padding: 5px 5px; 
     font-size: large;
     font-weight: 900;
@@ -216,7 +216,7 @@ header.hidden {
 }
 
 .navbar-contact {
-    color: var(--color-flash);
+    color: white;
     text-decoration: none;
     padding: 5px 5px; 
     font-size: large;
@@ -225,7 +225,7 @@ header.hidden {
 }
 
 .navbar-contact:hover {
-    color: var(--color-darkflash);   
+    color: var(--color-flashier);   
 }
 
 .pattern-1 {
