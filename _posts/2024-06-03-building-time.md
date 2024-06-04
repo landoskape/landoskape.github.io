@@ -1,4 +1,5 @@
 ---
+title: We have a site!
 layout: post
 date: 2024-06-03
 tags:
@@ -7,8 +8,6 @@ tags:
 author: Andrew Landau
 subheader: Thoughts on building my first static website
 ---
-
-## We have a site!!
 
 Alright, that was fun. I've been wanting to build a static website for a while and finally did it. It was fun! Since the point of this website is to capture my thoughts and things I've learned, I'll start by sharing about my experience of making a site in the age of AI. 
 
