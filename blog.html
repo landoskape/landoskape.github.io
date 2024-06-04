@@ -1,6 +1,7 @@
 ---
 layout: default
 title: blog
+permalink: /blog/
 ---
 
 <div class="posts-list">
@@ -22,7 +23,10 @@ title: blog
         </p>
         <div class="post-tags">
           {% for tag in post.tags %}
-            <span class="tag">{{ tag }}</span>
+            {% assign tag_name = tag | slugify %}
+            <a href="/tags/#{{ tag_name }}" class="tag-link">
+              <span class="tag">{{ tag }}</span>
+            </a>
             {% unless forloop.last %}
               <span class="tag-divider">-</span>
             {% endunless %}

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: homepage
+permalink: /
 ---
 
-Welcome to my blog. It's a work in progress, as it will always be, but if you find it sometime around Fall 2023, it's probably hardly even a blog yet. Yet. So, welcome, and if you are interested in talking to me about mine or your ideas, please contact me! It's why I'm a scientist.
+Welcome to my blog. It's a work in progress, as it will always be. You can learn more about me [here](/about.md) and my first [post](/_posts/2024-06-02-welcome.md) explains what this blog is for. If you are interested in talking to me about mine or your ideas, please [contact](mailto:andrewtylerlandau at gmail.com) me! It's why I'm a scientist.
 
