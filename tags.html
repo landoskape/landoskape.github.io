@@ -1,37 +1,75 @@
 ---
 layout: default
-title: Tags
+title: tags
 permalink: /tags/
 ---
 
-{% assign tags_data = site.data.tags %}
-
-<ul class="tag-box inline">
-{% for tag in sorted_tags %}
-  {% assign tag_name = tag | strip %}
-  <li>
-    <a href="#{{ tag_name | slugize }}">
-      {{ tags_data[tag_name].name }}
-      <span>{{ site.tags[tag_name].size }}</span>
-    </a>
-  </li>
-{% endfor %}
+<h1 style="text-align: center">
+  Themes
+</h1>
+<div style="text-align: left; max-width: 100%; margin-left: auto; margin-right: auto;">
+  <p>
+    This page lists all the themes used in the blog posts. Each post has a main topic, but 
+    I also tag the post with "themes" to group them across the major topics. Here you'll 
+    find a list of all the themes that are used in the blog, along with the posts that are 
+    associated with each them. When you hover over a theme, you can scroll through the posts
+    and navigate to them to check them out.
+  </p>
+</div>
+<ul class="tag-list">
+  {% for tag in site.data.tags %}
+    <li class="tag-box">
+      <div class="tag-info">
+        <h2 class="tag-name">{{ tag.name }}</h2>
+        <p class="tag-description">{{ tag.description }}</p>
+      </div>
+      <div class="tag-posts">
+        <ul class="tag-posts-list">
+          {% assign matching_posts = site.posts | where: "tags", tag.name %}
+          {% assign post_count = matching_posts | size %}
+          {% assign counter = 0 %}
+          {% for post in site.posts %}
+            {% if post.tags contains tag.name %}
+              {% assign counter = counter | plus: 1 %}
+              <li>
+                <a href="{{ post.url }}" data-description="{{ post.subtitle }}">
+                  {{ post.title }}
+                </a>
+              </li>
+              {% unless counter == post_count %}
+                <hr class="tag-spacer">
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+  {% endfor %}
 </ul>
 
-{% for tag in sorted_tags %}
-  {% assign tag_name = tag | strip %}
-  <h3 id="{{ tag_name | slugize }}">{{ tags_data[tag_name].name }}</h3>
-  <p>{{ tags_data[tag_name].description }}</p>
-  <ul>
-    {% for post in site.tags[tag_name] %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d-%m-%Y" }}</time>
-      </li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'tooltip';
+    document.body.appendChild(tooltip);
 
+    document.querySelectorAll('.tag-posts-list a').forEach(post => {
+      post.addEventListener('mouseenter', function (e) {
+        const description = this.getAttribute('data-description');
+        tooltip.innerText = description;
+        tooltip.style.display = 'block';
+        tooltip.style.left = `${e.pageX + 10}px`;  // Position tooltip slightly to the right
+        tooltip.style.top = `${e.pageY + 10}px`;   // Position tooltip slightly below the mouse pointer
+      });
 
-<!-- might need to make this tag_name | slugify somewhere to link from clicking on the tags -->
-  
+      post.addEventListener('mousemove', function (e) {
+        tooltip.style.left = `${e.pageX + 10}px`;
+        tooltip.style.top = `${e.pageY + 10}px`;
+      });
+
+      post.addEventListener('mouseleave', function () {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+</script>
