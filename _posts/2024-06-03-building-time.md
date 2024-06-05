@@ -3,10 +3,10 @@ title: We have a site!
 layout: post
 date: 2024-06-03
 tags:
-  - building
+  - code
   - plants
 author: Andrew Landau
-subheader: Thoughts on building my first static website
+subtitle: Thoughts on building my first static website
 ---
 
 Alright, that was fun. I've been wanting to build a static website for a while and finally did it. It was fun! Since the point of this website is to capture my thoughts and things I've learned, I'll start by sharing about my experience of making a site in the age of AI. 
@@ -32,10 +32,11 @@ I guess it's a bit like bootstrapping-- you can't start a computer with the most
 
 Speaking of computers, back before we had electronic computers, we had people who were responsible for solving tedious calculations and they were called... "computers"... (Side note: I learned about this because [NASA](https://www.nasa.gov/image-article/computer-conducts-data-analysis/) hired many women 'computers', several of which were featured in the excellent movie [Hidden Figures](https://en.wikipedia.org/wiki/Hidden_Figures) that gave some long-overdue public kudos to these brilliant people). 
 
+### Useful, but only when you're useful
 In this sense, a chatbot does exactly what the original intention for the concept of a "computer" implies. Chatbots speed up tedious calculations that we know how to do but would rather not so we can focus on higher level problems. And there's the key point of it all:
 
 <div class="text-highlight">
 The value of chatbots is maximized when we use them for things we already know how to do.
 </div>
 
-Case in point: I am a skilled python programmer and use chatbots somewhat often, but I almost never need them, I just use them to go faster. It's a huge powerup when I know what I need (for example, a PyQt GUI) but don't want to write the repetitive boiler plate code. However, since I know how to write PyQt GUIs, I can quickly edit the template provided by a chatbot to make it do exactly what I intended.
+Case in point: I am a skilled python programmer and use chatbots somewhat often, but I almost never need them, I just use them to go faster. It's a huge powerup when I know what I need (for example, a PyQt GUI) but don't want to write the repetitive boiler plate code. However, since I already know how to write GUIs, I can quickly edit the template provided by a chatbot to make it do exactly what I intended.
