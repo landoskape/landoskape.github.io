@@ -1,0 +1,76 @@
+
+.navbar {
+    display: flex;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Georgia';
+}
+
+.navbar-left, .navbar-right {
+    flex: 1;
+}
+
+.navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+
+.navbar-center {
+    display: flex;
+    flex: 2;
+    justify-content: center; /* Center the navigation links */
+    max-width: 800px;
+}
+  
+.navbar-center a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 5px;
+    max-width: 200px;
+    font-size: large;
+    font-weight: 900;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-center a:hover {
+    background-color: #436767;
+    box-shadow: 0 0 2px 2px #56bcbc;
+}
+
+.navbar-name {
+    color: white;
+    padding: 5px 5px; 
+    font-size: large;
+    font-weight: 900;
+}
+
+.navbar-item {
+    margin: 0px 10px 0px 10px; /* Adjust the value as needed */
+}
+
+.navbar-contact {
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px; 
+    font-size: large;
+    font-weight: 900;
+    transition: color 0.4s ease;
+}
+
+.navbar-contact:hover {
+    color: var(--color-flashier);   
+}

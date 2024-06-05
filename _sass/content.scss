@@ -1,0 +1,44 @@
+
+.centered-content {
+    background-color: var(--color-base);
+    padding: 20px 40px 20px; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    transition: background-color 0.6s;
+}
+
+.centered-content.focus {
+    background-color: var(--color-dark);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+
+.centered-content a:link {
+    color: var(--color-dark);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+  
+.centered-content a:hover {
+    color: var(--color-darkflash);
+}
+
+.centered-content a:visited {
+    color: var(--color-dark);
+}
+
+.centered-content a:visited:hover {
+    color: var(--color-darkflash); 
+}
+
+.text-highlight {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-flash);
+    border-radius: 15px;
+    font-style: italic;
+}
