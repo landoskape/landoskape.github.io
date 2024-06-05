@@ -1,9 +1,10 @@
-building:
-  name: building
-  description: This tag is used for posts that are about building things, usually code. 
-
-plants:
-  name: plants
+- name: code
   description: >
-    Plants are things that you must tend to periodically so that they grow and don't wither. 
-    Here, plants are used as a metaphor for projects that I work on every so often. 
+    I like writing code, I do it for work and for fun. These tags contain code I've written
+    or discussions about programming and computers. 
+
+- name: plants
+  description: >
+    Plants are things that you must tend to periodically so that they grow. 
+    Here, "plants" is used as a metaphor for projects that I am constantly cultivating. 
+
