@@ -63,6 +63,7 @@
 .post-caption .post-caption-text {
     visibility: hidden;
     max-width: 320px;
+    max-height: 90%;
     width: max-content;
     background-color: var(--color-dark);
     font-weight: normal;
@@ -89,6 +90,7 @@
     visibility: hidden;
     width: auto;
     max-width: 600px;
+    max-height: 60%;
     background-color: var(--color-dark);
     text-align: center;
     align-items: center;
