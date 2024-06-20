@@ -9,7 +9,7 @@ layout: default
 </p>
 <p style="text-align: center; margin-bottom: 30px;">
     {% for tag in page.tags %}
-        <a href="/tags/#{{ tag | slugify }}" class="tag-link">
+        <a href="tags/#{{ tag | slugify }}" class="tag-link">
             <span class="tag-in-post">{{ tag }}</span>
         </a>
         {% unless forloop.last %}
