@@ -9,6 +9,13 @@
     max-width: 800px;
     width: 100%;
     transition: background-color 0.6s;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Override header styles */
+.centered-content h1, h2, h3, h4, h5, h6 {
+    text-align: left;
 }
 
 .centered-content.focus {
@@ -41,4 +48,63 @@
     background-color: var(--color-flash);
     border-radius: 15px;
     font-style: italic;
+}
+
+.post-caption {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--color-dark);
+    text-shadow: 0.2px 0.2px 0.4px var(--color-flash);
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.post-caption .post-caption-text {
+    visibility: hidden;
+    max-width: 320px;
+    width: max-content;
+    background-color: var(--color-dark);
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 8px;
+    position: absolute;
+    bottom: 115%; /* Position the tooltip above the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: break-word;
+}
+
+.post-caption:hover .post-caption-text {
+    z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+}
+
+.post-caption .post-caption-image {
+    visibility: hidden;
+    width: auto;
+    max-width: 600px;
+    background-color: var(--color-dark);
+    text-align: center;
+    align-items: center;
+    clear: both;
+    display: block;
+    border-radius: 15px;
+    padding: 8px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%); /* Offset to truly center the element */
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.post-caption:hover .post-caption-image {
+    visibility: visible;
+    opacity: 1;
 }

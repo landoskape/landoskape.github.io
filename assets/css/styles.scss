@@ -5,6 +5,7 @@
 @import 'postlist';
 @import 'taglist';
 @import 'content';
+@import 'images';
 
 
 :root {
@@ -14,6 +15,7 @@
     --color-flashier: #d5fbff;
     --color-flash: #eafdff;
     --color-base: white;
+    --color-alt: #358050;
 }
 
 body {
@@ -44,6 +46,7 @@ header {
     margin: 0px;
     box-shadow: 0 0 25px 0 black;
     transition: top 0.6s; 
+    z-index: 10000;
 }
 
 header.hidden {
