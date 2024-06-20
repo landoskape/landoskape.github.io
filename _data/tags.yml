@@ -1,10 +1,15 @@
+- name: plants
+  description: >
+    Plants are things that you must tend to periodically so that they grow. 
+    Here, "plants" is used as a metaphor for projects that I am constantly cultivating. 
+
 - name: code
   description: >
     I like writing code, I do it for work and for fun. These tags contain code I've written
     or discussions about programming and computers. 
 
-- name: plants
+- name: running
   description: >
-    Plants are things that you must tend to periodically so that they grow. 
-    Here, "plants" is used as a metaphor for projects that I am constantly cultivating. 
+    I'm a runner, especially a long-distance runner and on trails and pretty places. 
+    These tags contain any posts I've made about my training and running adventures. 
 
