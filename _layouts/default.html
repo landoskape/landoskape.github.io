@@ -14,31 +14,8 @@
     <main class="centered-content">
       {{ content }}
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var header = document.querySelector("header");
-        var lastScrollY = window.scrollY;
-        
-        window.addEventListener("scroll", function() {
-          if (window.scrollY > lastScrollY) {
-            header.classList.add("hidden");
-          } else {
-            header.classList.remove("hidden");
-          }
-          lastScrollY = window.scrollY;
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const postBoxes = document.querySelectorAll('.post-box');
-      
-        postBoxes.forEach(box => {
-          box.addEventListener('click', function() {
-            window.location.href = this.getAttribute('data-url');
-          });
-        });
-      });
-    </script>
+    <script src="{{ '/assets/js/hide-navbar.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/post-box-linking.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/post-caption-image-centering.js' | relative_url }}"></script>
   </body>
 </html>
