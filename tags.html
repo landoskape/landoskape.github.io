@@ -18,7 +18,7 @@ permalink: /tags/
 </div>
 <ul class="tag-list">
   {% for tag in site.data.tags %}
-    <li class="tag-box">
+    <li class="tag-box" id="{{ tag.name | slugify }}">
       <div class="tag-info">
         <h2 class="tag-name">{{ tag.name }}</h2>
         <p class="tag-description">{{ tag.description }}</p>
@@ -47,29 +47,5 @@ permalink: /tags/
   {% endfor %}
 </ul>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tooltip = document.createElement('div');
-    tooltip.className = 'tooltip';
-    document.body.appendChild(tooltip);
-
-    document.querySelectorAll('.tag-posts-list a').forEach(post => {
-      post.addEventListener('mouseenter', function (e) {
-        const description = this.getAttribute('data-description');
-        tooltip.innerText = description;
-        tooltip.style.display = 'block';
-        tooltip.style.left = `${e.pageX + 10}px`;  // Position tooltip slightly to the right
-        tooltip.style.top = `${e.pageY + 10}px`;   // Position tooltip slightly below the mouse pointer
-      });
-
-      post.addEventListener('mousemove', function (e) {
-        tooltip.style.left = `${e.pageX + 10}px`;
-        tooltip.style.top = `${e.pageY + 10}px`;
-      });
-
-      post.addEventListener('mouseleave', function () {
-        tooltip.style.display = 'none';
-      });
-    });
-  });
-</script>
+<script src="{{ '/assets/js/move-tags.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/scroll-to-tag.js' | relative_url }}"></script>
